@@ -28,13 +28,17 @@ class BaseTest(unittest.TestCase):
                 # 'appWaitPackage': self.data.whatsapp_app_package,
                 # 'appWaitActivity': self.data.whatsapp_app_activity,
                 'appWaitDuration': '30000',
-                'noReset': True,
+                'noReset': False,
                 'fullReset': False,
                 # 'autoGrantPermissions': True,
+                # 'unicodeKeyboard': True,
+                # 'resetKeyboard': True,
             })
 
     def tearDown(self):
         self.driver.quit()
+        # self.driver.press_button()
+        # self.driver.press_keycode()
 
 #
 # class TestCase(object):

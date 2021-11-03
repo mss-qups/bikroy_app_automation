@@ -13,18 +13,21 @@ class BasePage(object):
         self.driver = driver
         self.timeout = 30
 
-    def click(self, locator):
-        self.driver.implicitly_wait(1)
-        # sleep(1)
-        self.driver.find_element(locator).click()
+    def click_by_id(self, locator):
+        sleep(1)
+        self.driver.find_element_by_id(locator).click()
+
+    def click_by_class_name(self, locator):
+        sleep(1)
+        self.driver.find_element_by_class_name(locator).click()
 
     def clear_data(self, locator):
         self.driver.find_element(locator).clear()
 
     def send_data(self, data, locator):
-        self.driver.implicitly_wait(1)
-        # sleep(1)
-        self.driver.find_element(locator).send_keys(data)
+        # self.driver.implicitly_wait(1)
+        sleep(1)
+        self.driver.find_element_by_id(locator).set_value(data)
 
     def is_element_displayed(self, locator):
         val = self.driver.find_element(locator).is_displayed()
