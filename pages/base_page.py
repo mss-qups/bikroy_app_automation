@@ -16,22 +16,22 @@ class BasePage(object):
     def click(self, locator):
         self.driver.implicitly_wait(1)
         # sleep(1)
-        self.driver.find_element_by_xpath(locator).click()
+        self.driver.find_element(locator).click()
 
     def clear_data(self, locator):
-        self.driver.find_element_by_xpath(locator).clear()
+        self.driver.find_element(locator).clear()
 
     def send_data(self, data, locator):
         self.driver.implicitly_wait(1)
         # sleep(1)
-        self.driver.find_element_by_xpath(locator).send_keys(data)
+        self.driver.find_element(locator).send_keys(data)
 
     def is_element_displayed(self, locator):
-        val = self.driver.find_element_by_xpath(locator).is_displayed()
+        val = self.driver.find_element(locator).is_displayed()
         return val
 
     def get_attribute_value(self, attributeName, locator):
-        val = self.driver.find_element_by_xpath(locator).get_attribute(attributeName)
+        val = self.driver.find_element(locator).get_attribute(attributeName)
         return val
 
     def go_back(self):
@@ -40,11 +40,11 @@ class BasePage(object):
         # sleep(1)
 
     def find_element(self, locator):
-        return self.driver.find_element_by_xpath(locator)
+        return self.driver.find_element(locator)
 
     # Search for multiple elements
     def find_elements(self, locator):
-        elements = self.driver.find_elements_by_xpath(locator)
+        elements = self.driver.find_element(locator)
         return elements
 
     def scroll_down(self):
