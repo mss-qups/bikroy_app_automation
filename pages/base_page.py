@@ -14,8 +14,19 @@ class BasePage(object):
         self.timeout = 30
 
     def click_by_id(self, locator):
-        sleep(1)
+        sleep(2)
         self.driver.find_element_by_id(locator).click()
+        sleep(2)
+
+    def click_by_class(self, locator):
+        sleep(2)
+        self.driver.find_element_by_xpath(locator)
+        sleep(2)
+
+    def click_by_xpath(self, locator):
+        sleep(1)
+        self.driver.find_element_by_xpath(locator).click()
+        sleep(1)
 
     def click_by_class_name(self, locator):
         sleep(1)
