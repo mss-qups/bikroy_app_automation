@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 class BikroyLocators:
     emailText = "ashiq.qups@gmail.com"
     passwordText = "Asdfgh123456"
-    postBtn = (By.ID, "com.bikroy:id/btn_post")
+    postBtn = "com.bikroy:id/btn_post" # id
     # homeBtn = By.ID("com.bikroy:id/main_bottom_panel_home")
     search_icon = "com.bikroy:id/main_bottom_panel_search"  # id
     # chatBtn = By.ID("com.bikroy:id/main_bottom_panel_chat")
