@@ -14,6 +14,11 @@ class HomePage(BasePage):
     def click_profile_icon(self):
         self.click_by_id(self.locator.profileBtn)
 
+    def click_post_btn(self):
+        sleep(3)
+        self.click_by_id(self.locator.postBtn)
+        time.sleep(3)
+
     def close_intro(self):
         try:
             sleep(3)
